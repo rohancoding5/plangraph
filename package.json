@@ -1,0 +1,37 @@
+{
+  "name": "plangraph",
+  "version": "0.1.0",
+  "description": "Turns a vague engineering request into a dependency graph of small tasks with files, acceptance criteria, tests, and constraints.",
+  "type": "module",
+  "bin": {
+    "plangraph": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/__tests__/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "planning",
+    "task-decomposition",
+    "developer-tools",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
+}
